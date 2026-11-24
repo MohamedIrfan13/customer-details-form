@@ -1,0 +1,167 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND IMAGE */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background-image: url("backgroundimg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+/* GLASS CONTAINER */
+
+.container {
+    width: 850px;
+    max-width: 100%;
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADING */
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* FORM GROUP */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* LABEL */
+
+label {
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* INPUT AND SELECT */
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+
+    outline: none;
+
+    color: white;
+    font-size: 14px;
+}
+
+/* PLACEHOLDER */
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* INPUT FOCUS */
+
+input:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: white;
+}
+
+/* SELECT OPTIONS */
+
+select option {
+    color: black;
+}
+
+/* BUTTONS */
+
+button {
+    padding: 12px 30px;
+    margin-top: 25px;
+    margin-right: 10px;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    font-size: 15px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+/* CANCEL BUTTON */
+
+#cancel {
+    background: rgba(255, 0, 0, 0.2);
+}
+
+#cancel:hover {
+    background: #d93636;
+    color: white;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+}
